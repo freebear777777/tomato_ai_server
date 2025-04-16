@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분석 결과</title>
+</head>
+<body>
+
+    <h1>📸 최근 업로드 이미지</h1>
+    <img src="{{ image_path }}" alt="Latest Image" width="400">
+
+    <h2>🧠 분석 결과</h2>
+    <ul>
+        {% for item in result %}
+            <li>
+                {% if item.class %}
+                    {{ item.class }} (정확도: {{ item.confidence | round(2) }})
+                {% else %}
+                    {{ item.result }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
