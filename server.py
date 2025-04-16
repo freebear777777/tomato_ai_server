@@ -6,6 +6,7 @@ from PIL import Image
 from flask import Flask, jsonify, render_template, request, send_from_directory
 
 # YOLOv5 모듈 경로 추가 (상대 경로)
+<<<<<<< HEAD
 sys.path.append('/Users/yuseunghun/yolov5')
 
 
